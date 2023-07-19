@@ -706,7 +706,7 @@ ul {
   flex-direction: column;
   justify-content: center;
 }
-.find-us-links .icon,
+
 .icons-list .icon {
   width: 44px;
   height: 44px;
@@ -718,6 +718,17 @@ ul {
   cursor: pointer;
   
 }
+.find-us-links .icon{
+  width: 44px;
+  height: 44px;
+  background-color: #48494f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 22px;
+  cursor: pointer;
+}
+
 
 
 .find-us-links .icon:hover,
