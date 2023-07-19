@@ -84,9 +84,9 @@ ul {
 }
 
 .hero-section {
-  background-image: url("./images/main-background.png"), lightgray 0px -147.517px / 100% 170.667% no-repeat;
-  width: 1600px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),  url("/images/main-background.png") ;
   height: 600px;
+  background-color:  rgba(47, 48, 58, 0.40);;
 }
 .hero-heading {
   color: #fff;
@@ -200,9 +200,8 @@ ul {
 .email:focus,
 .phone-number:focus,
 .contact-details:focus,
-.contact-details:hover,
-svg:hover,
-svg:focus {
+.contact-details:hover
+ {
   color: var(--link-color);
 }
 
@@ -663,7 +662,10 @@ svg:focus {
   display: flex;
   margin-top: 16px;
   gap: 10px;
+  
 }
+
+
 .icons-list .icon {
   width: 44px;
   height: 44px;
@@ -675,10 +677,8 @@ svg:focus {
   color: #afb1b8;
 }
 
-.icons-list .icon:hover,
-.icons-list .icon:focus {
-  color: var(--background-color);
-}
+
+
 .icons-list .icon svg {
   width: 20px;
   height: 20px;
@@ -706,15 +706,26 @@ svg:focus {
   flex-direction: column;
   justify-content: center;
 }
-.find-us-links .icon {
+.find-us-links .icon,
+.icons-list .icon {
   width: 44px;
   height: 44px;
-  background-color: #ffffff1a;
+  background-color: #fffffff0;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 22px;
+  cursor: pointer;
   
+}
+
+
+.find-us-links .icon:hover,
+.find-us-links .icon:focus,
+.icons-list .icon:hover,
+.icons-list .icon:focus {
+  color: white;
+  background-color: var(--background-color);
 }
 .find-us-links {
   display: flex;
@@ -726,9 +737,12 @@ svg:focus {
   height: 11.996px;
 }
 .navigation-contacts svg:focus,
-.navigation-contacts svg:hover {
+.navigation-contacts svg:hover, 
+.icon-logo-customers .icon-logo:hover,
+.icon-logo-customers .icon-logo:focus {
   color: #2196f3;
 }
+
 .first-section li svg {
   width: 70px;
   height: 70px;
@@ -758,10 +772,14 @@ svg:focus {
   padding-bottom: 50px;
 }
 
-.icon-logos svg {
+.icon-logos svg, .icon-logos {
   width: 106px;
   height: 60px;
   flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 .icon-logos .icon-logo-customers {
   display: flex;
@@ -776,20 +794,6 @@ svg:focus {
   gap: 30px;
 }
 
-.icon-logo:hover,
-.icon-logo:focus,
-.icon-social:hover,
-.icon-social:focus{
-  color: var(--link-color);
-  
-}
-
-.icon-logos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-}
 
 .regular-customer-section {
   display: flex;
@@ -801,7 +805,7 @@ svg:focus {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.navigation-contacts svg, .our-team svg, .regular-customer-section svg{
+.regular-customer-section svg{
   color:  var(--icons-color);
 }
 
